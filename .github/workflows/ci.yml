@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - run: npm ci
+
+      # Retrieval and chunking are pure functions over the committed vector
+      # store, so everything below runs without an API key or any network call.
+      - name: Typecheck
+        run: npx tsc --noEmit
+      - name: Lint
+        run: npx eslint .
+      - name: Unit tests
+        run: npm test
+      - name: Build
+        run: npm run build

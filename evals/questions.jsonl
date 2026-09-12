@@ -1,0 +1,30 @@
+{"id":"q01","question":"What is the social security wage base limit for 2026?","expectedSourceIds":["p15-p1-c5","p15-p29-c281"],"expectedContains":["$184,500"],"answerable":true}
+{"id":"q02","question":"What is the Medicare tax rate for employees and employers?","expectedSourceIds":["p15-p1-c5","p15-p29-c281","p15-p29-c282"],"expectedContains":["1.45%"],"answerable":true}
+{"id":"q03","question":"At what wage level must I start withholding Additional Medicare Tax, and at what rate?","expectedSourceIds":["p15-p29-c282","p15b-p31-c282"],"expectedContains":["0.9%","$200,000"],"answerable":true}
+{"id":"q04","question":"What is the FUTA tax rate for 2026?","expectedSourceIds":["p15-p44-c414","p15-p44-c415"],"expectedContains":["6.0%"],"answerable":true}
+{"id":"q05","question":"How much of each employee's wages is subject to FUTA tax?","expectedSourceIds":["p15-p44-c415","p15-p44-c418"],"expectedContains":["$7,000"],"answerable":true}
+{"id":"q06","question":"What is the maximum state unemployment credit against FUTA tax, and what FUTA rate does that leave?","expectedSourceIds":["p15-p44-c415"],"expectedContains":["5.4%","0.6%"],"answerable":true}
+{"id":"q07","question":"What lookback period tax total makes me a monthly rather than a semiweekly schedule depositor?","expectedSourceIds":["p15-p32-c305","p15-p32-c306"],"expectedContains":["$50,000"],"answerable":true}
+{"id":"q08","question":"Under the monthly deposit schedule, when are employment taxes due?","expectedSourceIds":["p15-p33-c310"],"expectedContains":["15th"],"answerable":true}
+{"id":"q09","question":"If I am a semiweekly schedule depositor and payday falls on a Thursday, when is the deposit due?","expectedSourceIds":["p15-p33-c312","p15-p34-c324"],"expectedContains":["Wednesday"],"answerable":true}
+{"id":"q10","question":"What flat withholding rate applies to supplemental wages?","expectedSourceIds":["p15-p2-c6","p15-p24-c224","p15b-p2-c10"],"expectedContains":["22%"],"answerable":true}
+{"id":"q11","question":"What is the backup withholding rate?","expectedSourceIds":["p15-p2-c7"],"expectedContains":["24%"],"answerable":true}
+{"id":"q12","question":"Do employees have to report tips in a month when they earned only a small amount in tips?","expectedSourceIds":["p15-p22-c207","p15-p52-c462"],"expectedContains":["$20"],"answerable":true}
+{"id":"q13","question":"How long do I have to keep employment tax records?","expectedSourceIds":["p15-p9-c83"],"expectedContains":["4 years"],"answerable":true}
+{"id":"q14","question":"When is Form 941 due?","expectedSourceIds":["p15-p38-c356"],"expectedContains":["last day of the month"],"answerable":true}
+{"id":"q15","question":"Do I have to deposit FUTA tax if my quarterly liability is small?","expectedSourceIds":["p15-p44-c418","p15-p12-c109"],"expectedContains":["$500"],"answerable":true}
+{"id":"q16","question":"What are the failure-to-deposit penalty rates for late deposits?","expectedSourceIds":["p15-p36-c340"],"expectedContains":["2%","5%","10%"],"answerable":true}
+{"id":"q17","question":"How must federal tax deposits be paid?","expectedSourceIds":["p15-p31-c297","p15-p35-c332","p15-p6-c53"],"expectedContains":["EFT"],"answerable":true}
+{"id":"q18","question":"When can I pay employment taxes with my return instead of depositing them?","expectedSourceIds":["p15-p31-c297","p15-p31-c298"],"expectedContains":["$2,500"],"answerable":true}
+{"id":"q19","question":"Who can be held liable for the trust fund recovery penalty?","expectedSourceIds":["p15-p36-c344","p15-p36-c345"],"expectedContains":["willful"],"answerable":true}
+{"id":"q20","question":"What is the health FSA salary reduction limit for plan years beginning in 2026?","expectedSourceIds":["p15b-p2-c7","p15b-p4-c32"],"expectedContains":["$3,400"],"answerable":true}
+{"id":"q21","question":"How much educational assistance can I exclude from an employee's wages each year?","expectedSourceIds":["p15b-p12-c95","p15b-p6-c45","p15b-p12-c96"],"expectedContains":["$5,250"],"answerable":true}
+{"id":"q22","question":"What is the dependent care assistance exclusion limit for 2026?","expectedSourceIds":["p15b-p2-c14","p15b-p6-c45"],"expectedContains":["$7,500"],"answerable":true}
+{"id":"q23","question":"What is the monthly exclusion for qualified parking in 2026?","expectedSourceIds":["p15b-p2-c7"],"expectedContains":["$340"],"answerable":true}
+{"id":"q24","question":"What is the deduction limit for employee achievement awards that are not qualified plan awards?","expectedSourceIds":["p15b-p8-c67"],"expectedContains":["$400"],"answerable":true}
+{"id":"q25","question":"When must I stop depositing FUTA tax on an employee's wages?","expectedSourceIds":["p15-p44-c418"],"expectedContains":["$7,000"],"answerable":true}
+{"id":"q26","question":"What is the California state disability insurance withholding rate for employers?","expectedSourceIds":[],"expectedContains":[],"answerable":false}
+{"id":"q27","question":"How many weeks of paid family leave must an employer provide under federal law?","expectedSourceIds":[],"expectedContains":[],"answerable":false}
+{"id":"q28","question":"What is the filing deadline for an employer's annual Form 5500 retirement plan return?","expectedSourceIds":[],"expectedContains":[],"answerable":false}
+{"id":"q29","question":"What is the refund policy if I overpay the employer identification number application fee?","expectedSourceIds":[],"expectedContains":[],"answerable":false}
+{"id":"q30","question":"How do I appeal a proposed employment tax assessment to the United States Tax Court?","expectedSourceIds":[],"expectedContains":[],"answerable":false}

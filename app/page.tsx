@@ -1,69 +1,61 @@
-import Image from "next/image";
+import { getStats } from "@/lib/stats";
+import { loadCanned } from "@/lib/canned";
+import { StatBar } from "@/components/stat-bar";
+import { ThemeToggle } from "@/components/theme-toggle";
+import { ChatPanel } from "@/components/chat/chat-panel";
+
+const REPO = process.env.NEXT_PUBLIC_REPO_URL ?? "https://github.com";
+
+/** lucide-react no longer ships brand marks, and this is 1 element. */
+const GithubMark = () => (
+  <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor" aria-hidden focusable="false">
+    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z" />
+  </svg>
+);
 
 export default function Home() {
+  const stats = getStats();
+  const suggestions = loadCanned().map((c) => c.question);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+    <div className="mx-auto flex h-dvh max-w-3xl flex-col border-x border-[var(--border)]">
+      <a
+        href="#composer"
+        className="sr-only rounded-[var(--radius)] bg-[var(--accent)] px-3 py-2 text-[var(--accent-fg)] focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50"
+      >
+        Skip to the question box
+      </a>
+
+      <header className="sticky top-0 z-10 flex items-center gap-3 border-b border-[var(--border)] bg-[var(--bg)]/90 px-4 py-3 backdrop-blur">
+        <h1 className="flex-1 text-[15px] font-semibold tracking-tight">
+          Cited
+          <span className="ml-2 font-normal text-[var(--text-muted)]">
+            RAG with sources you can check
+          </span>
+        </h1>
+        <ThemeToggle />
+        <a
+          href={REPO}
+          target="_blank"
+          rel="noreferrer noopener"
+          aria-label="Source code on GitHub"
+          className="grid size-11 place-items-center rounded-[var(--radius)] text-[var(--text-muted)] transition-colors hover:bg-[var(--surface-2)] hover:text-[var(--text)]"
+        >
+          <GithubMark />
+        </a>
+      </header>
+
+      <StatBar stats={stats} />
+
+      <main className="flex min-h-0 flex-1 flex-col">
+        <ChatPanel suggestions={suggestions} />
       </main>
+
+      <footer className="border-t border-[var(--border)] px-4 py-3 text-[12px] leading-relaxed text-[var(--text-muted)]">
+        Corpus: IRS Publication 15 (Circular E) and Publication 15-B, 2026 editions — works of the
+        U.S. federal government, in the public domain. Answers are generated from those documents
+        only and are not tax advice.
+      </footer>
     </div>
   );
 }

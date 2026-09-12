@@ -1,26 +1,48 @@
 {
-  "name": "rag-chatbot",
-  "version": "0.1.0",
+  "name": "cited-rag-chatbot",
+  "version": "1.0.0",
   "private": true,
+  "description": "A RAG chatbot that cites the exact source chunk for every claim and refuses, in code, when the documents do not cover the question. Ships with a runnable eval suite.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "embed": "tsx scripts/embed.ts",
+    "eval": "tsx evals/run.ts",
+    "canned": "tsx scripts/canned.ts",
+    "test": "tsx --test lib/chunk.test.ts lib/retrieval.test.ts",
+    "sweep": "tsx evals/run.ts --sweep",
+    "eval:ollama": "cross-env LLM_PROVIDER=ollama tsx evals/run.ts",
+    "shots": "tsx scripts/screenshots.ts"
   },
   "dependencies": {
+    "@upstash/ratelimit": "^2.0.8",
+    "@upstash/redis": "^1.38.4",
+    "lucide-react": "^1.43.0",
+    "motion": "^13.2.0",
     "next": "16.3.4",
+    "pdfjs-dist": "^5.4.296",
     "react": "19.2.8",
-    "react-dom": "19.2.8"
+    "react-dom": "19.2.8",
+    "zod": "^4.5.4"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "cross-env": "^10.1.0",
     "eslint": "^9",
     "eslint-config-next": "16.3.4",
+    "pdf-parse": "^2.4.5",
+    "playwright": "^1.63.0",
     "tailwindcss": "^4",
+    "tsx": "^4.23.13",
     "typescript": "^5"
   }
 }
