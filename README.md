@@ -305,13 +305,20 @@ components/chat/        message list, citation chips, source drawer, composer
 
 ## Deploying
 
-Runs on Vercel Hobby, free tier, no card.
+Runs on Vercel Hobby, free tier, no card. Pushes to `main` deploy automatically
+once the repo is connected under Project Settings -> Git.
 
 ```bash
 vercel link
 vercel env add GOOGLE_GENERATIVE_AI_API_KEY production
+vercel env add GOOGLE_CHAT_MODEL production      # see the quota note below
 vercel --prod
 ```
+
+Note that `engines.node` does **not** control the build image: Vercel's per-project
+Node setting takes precedence, so this deploys on 24.x while CI and `.nvmrc` use 22.
+`engines` states the real minimum (20.12, for `process.loadEnvFile`). To make all
+three identical, change it under Project Settings -> General -> Node.js Version.
 
 Two things about this app specifically are easy to get wrong on Vercel, and both fail
 *after* a green build rather than during it:
