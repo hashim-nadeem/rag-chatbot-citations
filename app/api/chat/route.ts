@@ -9,6 +9,14 @@ import { REFUSAL, type ChatMeta } from "@/lib/types";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
+/**
+ * Vercel's default function timeout is 10s, which a streamed answer can exceed:
+ * generation plus reasoning tokens regularly runs longer, and the stream would
+ * be cut mid-sentence. 60s is the Hobby ceiling and far more than any real
+ * answer needs — it is a safety net, not a target.
+ */
+export const maxDuration = 60;
+
 const Body = z.object({
   message: z.string().trim().min(1, "Ask a question first.").max(500, "Questions are capped at 500 characters."),
 });

@@ -1,6 +1,6 @@
 # Cited — a RAG chatbot that shows its sources and admits what it doesn't know
 
-[![CI](https://github.com/hashim-nadeem/cited-rag-chatbot/actions/workflows/ci.yml/badge.svg)](https://github.com/hashim-nadeem/cited-rag-chatbot/actions/workflows/ci.yml)
+[![CI](https://github.com/hashim-nadeem/rag-chatbot-citations/actions/workflows/ci.yml/badge.svg)](https://github.com/hashim-nadeem/rag-chatbot-citations/actions/workflows/ci.yml)
 
 **Live demo:** _not deployed yet — see [Deploying](#deploying)_
 
