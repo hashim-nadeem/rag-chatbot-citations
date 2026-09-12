@@ -1,7 +1,7 @@
 [
   {
     "question": "What is the social security wage base limit for 2026?",
-    "answer": "The social security wage base limit for 2026 is $184,500 [1][2][3].",
+    "answer": "The social security wage base limit for 2026 is $184,500 [1][2].",
     "citations": [
       {
         "n": 1,
@@ -20,39 +20,12 @@
         "page": 1,
         "text": "Social security and Medicare taxes for 2026. The rate of social security tax on taxable wages is 6.2% each for Publication 15 (2026) Catalog Number 10000W Dec 15, 2025 Department of the Treasury Internal Revenue Service www.irs.gov the employer and employee. The social security wage base limit is $184,500. The Medicare tax rate is 1.45% each for the employee and employer, unchanged from 2025. There is no wage base limit for Medicare tax. Social security and Medicare taxes apply to the wages of household workers you pay $3,000 or more in cash wages in 2026. Social security and Medicare taxes apply to election workers who are paid $2,500 or more in cash or an equivalent form of compensation in 2026. Permanent extension of individual tax rates. P.L.",
         "score": 0.7
-      },
-      {
-        "n": 3,
-        "id": "p15-p22-c210",
-        "source": "p15.pdf",
-        "section": "6. Tips",
-        "page": 22,
-        "text": "wages (excluding tips) or from other funds they make available. See Tips are treated as supplemental wages in section 7 for more information.  Stop collecting the employee share of social security tax when their wages and tips for tax year 2026 reach $184,500; collect the income and employee Medicare taxes for the whole year on all wages and tips. You’re responsible for the employer social security tax on wages and tips until the wages (including tips) reach the limit. You’re responsible for the employer Medicare tax for the whole year on all wages and tips. Tips are considered to be paid at the time the employee reports them to you. Deposit taxes on tips based on your deposit schedule 22 Publication 15 (2026) as described in section 11.",
-        "score": 0.678
-      },
-      {
-        "n": 4,
-        "id": "p15b-p2-c7",
-        "source": "p15b.pdf",
-        "section": "What’s New",
-        "page": 2,
-        "text": "use of a vehicle you provide to an employee. See Cents-per-Mile Rule in section 3. Qualified parking exclusion and commuter transportation benefit.  For 2026, the monthly exclusion for qualified parking is $340 and the monthly exclusion for commuter highway vehicle transportation and transit passes is $340. See Qualified Transportation Benefits in section 2. Contribution limit on a health flexible spending arrangement (FSA). For plan years beginning in 2026, a cafeteria plan may not allow an employee to request salary reduction contributions for a health FSA in excess of $3,400. Moving expense reimbursement. P.L. 119-21, commonly known as the One Big Beautiful Bill Act, permanently eliminates the exclusion for qualified moving expense reimbursements from your employee's income.",
-        "score": 0.631
-      },
-      {
-        "n": 5,
-        "id": "p15b-p2-c14",
-        "source": "p15b.pdf",
-        "section": "What’s New",
-        "page": 2,
-        "text": "For more information, see the instructions for your employment tax return. Employment tax return transcripts are now available electronically.  You can now access Form 940, Form 941, Form 943, Form 944, and Form 945 return transcripts for tax years 2023 and later using your IRS business tax account. For more information, go to IRS.gov/ BusinessesTranscript. To access your IRS business tax account, go to IRS.gov/BusinessAccount. Dependent care assistance exclusion from wages. For the 2026 tax year, the annual dependent care FSA limit was raised from $5,000 to $7,500 ($2,500 to $3,750 for married filing separately). See Exclusion from wages, later. Employer’s meal deduction.",
-        "score": 0.628
       }
     ]
   },
   {
     "question": "What is the FUTA tax rate for 2026?",
-    "answer": "For 2026, the FUTA tax rate is 6.0% [1]. If you are entitled to the maximum 5.4% credit, the FUTA tax rate after credit is 0.6% [1].",
+    "answer": "For 2026, the FUTA tax rate is 6.0% [1]. If you are entitled to the maximum 5.4% credit, the FUTA tax rate after the credit is 0.6% [1].",
     "citations": [
       {
         "n": 1,
@@ -80,30 +53,12 @@
         "page": 43,
         "text": "unemployment tax. For a list of state unemployment agencies, go to the U.S. Department of Labor’s website at oui.doleta.gov/unemploy/agencies.asp.  Only the employer pays FUTA tax; it isn’t withheld from the employee’s wages. For more information, see the Instructions for Form 940. Who must pay? Use the following three tests to determine whether you must pay FUTA tax. Each test applies to a different category of employee, and each is independent of the others. If a test describes your situation, you’re subject to FUTA tax on the wages you pay to employees in that category during the current calendar year. 1. General test. You’re subject to FUTA tax in 2026 on the wages you pay employees who aren’t farmworkers or household workers if: a.",
         "score": 0.712
-      },
-      {
-        "n": 4,
-        "id": "p15b-p2-c14",
-        "source": "p15b.pdf",
-        "section": "What’s New",
-        "page": 2,
-        "text": "For more information, see the instructions for your employment tax return. Employment tax return transcripts are now available electronically.  You can now access Form 940, Form 941, Form 943, Form 944, and Form 945 return transcripts for tax years 2023 and later using your IRS business tax account. For more information, go to IRS.gov/ BusinessesTranscript. To access your IRS business tax account, go to IRS.gov/BusinessAccount. Dependent care assistance exclusion from wages. For the 2026 tax year, the annual dependent care FSA limit was raised from $5,000 to $7,500 ($2,500 to $3,750 for married filing separately). See Exclusion from wages, later. Employer’s meal deduction.",
-        "score": 0.641
-      },
-      {
-        "n": 5,
-        "id": "p15b-p1-c6",
-        "source": "p15b.pdf",
-        "section": "What’s New",
-        "page": 1,
-        "text": "Cents-per-mile rule. The business mileage rate for 2026 hasn’t yet published at the time this publication was published. Go to IRS.gov/Pub15B for the updated mileage rate for 2026. You may use this rate to reimburse an employee for business use of a personal vehicle, and under Publication 15-B (2026) Catalog Number 29744N Dec 23, 2025 Department of the Treasury Internal Revenue Service www.irs.gov certain conditions, you may use the rate under the cents-per-mile rule to value the personal use of a vehicle you provide to an employee. See Cents-per-Mile Rule in section 3. Qualified parking exclusion and commuter transportation benefit.",
-        "score": 0.634
       }
     ]
   },
   {
     "question": "Under the monthly deposit schedule, when are employment taxes due?",
-    "answer": "Under the monthly deposit schedule, employment taxes on payments made during a month must be deposited by the 15th day of the following month [1]. For monthly schedule depositors, the deposit period is a calendar month [3].",
+    "answer": "Under the monthly deposit schedule, employment taxes on payments made during a month must be deposited by the 15th day of the following month [1].",
     "citations": [
       {
         "n": 1,
@@ -154,7 +109,7 @@
   },
   {
     "question": "What flat withholding rate applies to supplemental wages?",
-    "answer": "Supplemental wages are generally subject to a flat withholding rate of 22% [3][4][5]. If supplemental wages paid to an employee during the calendar year exceed $1 million, the withholding rate on the excess is 37% [1][4][5].",
+    "answer": "The flat withholding rate that applies to supplemental wages is 22% [3][4][5].",
     "citations": [
       {
         "n": 1,
@@ -205,7 +160,7 @@
   },
   {
     "question": "How long do I have to keep employment tax records?",
-    "answer": "Generally, you must keep all records of employment taxes for at least 4 years [1]. However, records related to qualified sick leave wages",
+    "answer": "You must keep all records of employment taxes for at least 4 years [1]. However, records related to qualified sick leave wages and qualified family leave wages for leave taken after March 31, 2021, and before October 1, 2021, should be kept for at least 6 years [2][3]. Additionally, records related to qualified wages for the COVID-19 related employee retention credit paid after June 30, 2021, should be kept for at least 7 years [3].",
     "citations": [
       {
         "n": 1,
@@ -233,24 +188,39 @@
         "page": 9,
         "text": "leave wages and qualified family leave wages for leave taken after March 31, 2021, and before October 1, 2021, should be kept for at least 6 years.  For more information on substantiation requirements, go to IRS.gov/PLC. Records related to qualified wages for the COVID-19 related employee retention credit paid after June 30, 2021, should be kept for at least 7 years. For more information on substantiation requirements, go to IRS.gov/ERC. If a crew leader furnished you with farmworkers, you must keep a record of the name, permanent mailing address, and EIN of the crew leader. If the crew leader has no permanent mailing address, record their present address.",
         "score": 0.683
+      }
+    ]
+  },
+  {
+    "question": "When is Form 941 due?",
+    "answer": "Form 941 must be filed by the last day of the month that follows the end of the quarter [2]. However, if you timely deposited all taxes when due, you may file by May 10, August 10, November 10, or February 10, respectively [1].",
+    "citations": [
+      {
+        "n": 1,
+        "id": "p15-p12-c109",
+        "source": "p15.pdf",
+        "section": "Calendar > By April 30, July 31, October 31, and January 31",
+        "page": 12,
+        "text": "Deposit FUTA tax. Deposit FUTA tax for the quarter (including any amount carried over from other quarters) if over $500. If $500 or less, carry it over to the next quarter. See section 14 for more information. File Form 941. File Form 941 and deposit any undeposited income, social security, and Medicare taxes. You may pay these taxes with Form 941 if your total tax liability for the quarter (Form 941, line 12) is less than $2,500. If you timely deposited all taxes when due, you may file by May 10, August 10, November 10, or February 10, respectively. Don’t file Form 941 for these quarters if you have been notified to file Form 944 and you didn’t request and receive written notice from the IRS to file quarterly Forms 941.",
+        "score": 0.75
       },
       {
-        "n": 4,
-        "id": "p15b-p2-c13",
-        "source": "p15b.pdf",
-        "section": "What’s New",
-        "page": 2,
-        "text": "refund, you can still choose to have your overpayment applied to your next return by checking the appropriate box on your employment tax return.  For more information, see the instructions for your employment tax return. Make balance due payments electronically. EO 14247 also promotes operational efficiency by mandating the transition to electronic payments for all payments made to the federal government. Therefore, pay your balance due on your employment tax return electronically. There are several easy, safe, and secure ways to pay your balance due electronically. For more information, see the instructions for your employment tax return. Employment tax return transcripts are now available electronically.",
-        "score": 0.656
+        "n": 2,
+        "id": "p15-p38-c356",
+        "source": "p15.pdf",
+        "section": "Form 944, or Form 945",
+        "page": 38,
+        "text": "year to request to file Form 944. You must receive written notice from the IRS to file Form 944 instead of Forms 941 before you may file this form.  For more information on requesting to file Form 944, including the methods and deadlines for making a request, see the Instructions for Form 944. Form 941 must be filed by the last day of the month that follows the end of the quarter. However, if you made timely deposits in full payment of your taxes for the quarter, you may file by the 10th day of the 2nd month that follows the end of the quarter. See Calendar, earlier. Form 943.",
+        "score": 0.737
       },
       {
-        "n": 5,
-        "id": "p15b-p2-c14",
-        "source": "p15b.pdf",
-        "section": "What’s New",
-        "page": 2,
-        "text": "For more information, see the instructions for your employment tax return. Employment tax return transcripts are now available electronically.  You can now access Form 940, Form 941, Form 943, Form 944, and Form 945 return transcripts for tax years 2023 and later using your IRS business tax account. For more information, go to IRS.gov/ BusinessesTranscript. To access your IRS business tax account, go to IRS.gov/BusinessAccount. Dependent care assistance exclusion from wages. For the 2026 tax year, the annual dependent care FSA limit was raised from $5,000 to $7,500 ($2,500 to $3,750 for married filing separately). See Exclusion from wages, later. Employer’s meal deduction.",
-        "score": 0.653
+        "n": 3,
+        "id": "p15-p11-c99",
+        "source": "p15.pdf",
+        "section": "Calendar > By January 31",
+        "page": 11,
+        "text": "File Form 941 or Form 944. File Form 941 for the fourth quarter of the previous calendar year and deposit any undeposited income, social security, and Medicare taxes. You may pay these taxes with Form 941 if your total tax liability for the quarter (Form 941, line 12) is less than $2,500. File Form 944 for the previous calendar year instead of Form 941 if the IRS has notified you in writing to file Form 944. Pay any undeposited income, social security, and Medicare taxes with your Form 944. You may pay these taxes with Form 944 if your total tax liability for the year (Form 944, line 9) is less than $2,500. For additional rules on when you can pay your taxes with your return, see Payment with return in section 11. If you timely deposited all taxes when due, you may file by February 10.",
+        "score": 0.72
       }
     ]
   },
@@ -284,26 +254,13 @@
         "page": 9,
         "text": ". . . . . . . . . . . . . . . . . . . . . . . . . . . . 11 required to deposit) . . . . . . . . . . . . . . . . . . . . . 38 8 Publication 15 (2026)  withheld must be reported on Form 941, Form 943, or Form 944, not on Form 945. However, distributions from such plans to a beneficiary or estate of a deceased employee aren’t wages and are reported on Forms 1099-R, Distributions From Pensions, Annuities, Retirement or Profit-Sharing Plans, IRAs, Insurance Contracts, etc.; federal income tax withheld must be reported on Form 945. Backup withholding. You must generally withhold 24% of certain taxable payments if the payee fails to furnish you with their correct TIN. This withholding is referred to as “backup withholding.”",
         "score": 0.683
-      },
-      {
-        "n": 4,
-        "id": "p15b-p2-c10",
-        "source": "p15b.pdf",
-        "section": "What’s New",
-        "page": 2,
-        "text": "intelligence community employee or appointee could deduct if they had paid or incurred them without reimbursement. Bicycle commuting reimbursements.  P.L. 119-21 permanently eliminates the exclusion of qualified bicycle commuting reimbursements from your employee’s income for tax years beginning after 2025. See Qualified bicycle commuting reimbursement eliminated, later. Withholding on supplemental wages. The withholding rate on supplemental wages remains 22% (37% if supplemental wages paid to an employee during the calendar year exceed $1 million) because P.L. 119-21 permanently extended the individual tax rates enacted in P.L. 115-97, Tax Cuts and Jobs Act. See section 7 in Pub. 15 for more information about supplemental wages.",
-        "score": 0.611
-      },
-      {
-        "n": 5,
-        "id": "p15b-p2-c11",
-        "source": "p15b.pdf",
-        "section": "What’s New",
-        "page": 2,
-        "text": "the individual tax rates enacted in P.L. 115-97, Tax Cuts and Jobs Act. See section 7 in Pub. 15 for more information about supplemental wages.  Artificial intelligence (AI) literacy and AI development programs. Executive Order (EO) 14179, “Removing Barriers to American Leadership in Artificial Intelligence” (January 2025), and the subsequently published Winning the Race: America’s AI Action Plan (July 2025), were issued to promote AI literacy and development. Employer-provided AI literacy and skill development programs may be tax-free as working condition fringe benefits if they maintain or improve employee job skills at their current job. See Working Condition Benefits, later. Direct deposit of employment tax refunds now available.",
-        "score": 0.607
       }
     ]
+  },
+  {
+    "question": "What is the California state disability insurance withholding rate for employers?",
+    "answer": "I couldn't find that in the documents.",
+    "citations": []
   },
   {
     "question": "Do employees have to report tips in a month when they earned only a small amount in tips?",
@@ -335,24 +292,6 @@
         "page": 22,
         "text": "Cash tips your employee receives from customers are generally subject to withholding. Your employee must report cash tips to you by the 10th of the month after the month the tips are received. Cash tips include tips paid by cash, check, debit card, and credit card. The report should include tips you paid over to the employee for charge customers, tips the employee received directly from customers, and tips received from other employees under any tip-sharing arrangement. Both directly and indirectly tipped employees must report tips to you. No report is required for months when tips are less than $20. If you don’t give your employees any specific method to report tips (for example, an electronic tip reporting system), your employees must give you a statement reporting their tips.",
         "score": 0.722
-      },
-      {
-        "n": 4,
-        "id": "p15b-p10-c79",
-        "source": "p15b.pdf",
-        "section": "2. Fringe Benefit Exclusion Rules > De Minimis (Minimal) Benefits",
-        "page": 10,
-        "text": "You can exclude the value of a de minimis benefit you provide to an employee from the employee’s wages. A de minimis benefit is any property or service you provide to an employee that has so little value (taking into account how frequently you provide similar benefits to your employees) that accounting for it would be unreasonable or administratively impracticable. Cash and cash equivalent fringe benefits (for example, gift certificates, gift cards, and the use of a charge card or credit card), no matter how little, are never excludable as a de minimis benefit. However, meal money and local transportation fare, if provided on an occasional basis and because of overtime work, may be excluded, as discussed later. Examples of de minimis benefits include the following.",
-        "score": 0.674
-      },
-      {
-        "n": 5,
-        "id": "p15b-p32-c294",
-        "source": "p15b.pdf",
-        "section": "Depositing, and Reporting",
-        "page": 32,
-        "text": "not to withhold at any time by notifying the employee in the same manner. Amount to report on Form 941 (or Form 943, 944, or CT-1) and Form W-2.  The actual value of fringe benefits provided during a calendar year (or other period as explained under Special accounting rule, earlier in this section) must be determined by January 31 of the following year. You must report the actual value on Form 941 (or Form 943, 944, or CT-1) and Form W-2. If you choose, you can use a separate Form W-2 for fringe benefits and any other benefit information. Include the value of the fringe benefit in box 1 of Form W-2. Also include it in boxes 3 and 5, if applicable. You may show the total value of the fringe benefits provided in the calendar year or other period in box 14 of Form W-2.",
-        "score": 0.668
       }
     ]
   }

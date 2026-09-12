@@ -1,0 +1,15 @@
+{
+  "retrievalHitAt5": 0.92,
+  "answerAccuracy": 1,
+  "citationRate": 1,
+  "refusalPrecision": 1,
+  "falseRefusalRate": 0,
+  "meanLatencyMs": 1164,
+  "meanRefusalLatencyMs": 1,
+  "scored": 30,
+  "errored": 0,
+  "incomplete": false,
+  "ranAt": "2026-09-12T14:27:24.643Z",
+  "provider": "google",
+  "chunks": 847
+}

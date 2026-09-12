@@ -46,7 +46,7 @@ export const embedModel = () =>
 const chatModel = () =>
   provider() === "ollama"
     ? (process.env.OLLAMA_MODEL ?? "llama3.2")
-    : (process.env.GOOGLE_CHAT_MODEL ?? "gemini-3.6-flash");
+    : (process.env.GOOGLE_CHAT_MODEL ?? "gemini-3.5-flash-lite");
 
 /**
  * gemini-embedding-001 returns 3072 dimensions by default, which would make

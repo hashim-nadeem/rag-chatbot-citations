@@ -32,6 +32,7 @@ const QUESTIONS = [
   "How long do I have to keep employment tax records?",
   "When is Form 941 due?",
   "What is the backup withholding rate?",
+  "What is the California state disability insurance withholding rate for employers?",
   "Do employees have to report tips in a month when they earned only a small amount in tips?",
 ];
 

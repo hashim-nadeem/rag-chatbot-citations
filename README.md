@@ -4,8 +4,8 @@
 
 ### ▶ [rag-chatbot-citations.vercel.app](https://rag-chatbot-citations.vercel.app)
 
-Try **"What is the capital of France?"** — it refuses in ~3 ms without calling the
-model at all. Then click any `[1]` to read the exact chunk the answer came from.
+Try **"What is the capital of France?"** — it refuses without ever calling the model.
+Then click any `[1]` to read the exact chunk the answer came from.
 
 Ask a question about 95 pages of IRS employer tax guidance. Every factual sentence
 comes back with a citation you can click open to read the exact source passage — and
@@ -46,17 +46,37 @@ sounds like it should cover but doesn't ("What is the California state disabilit
 insurance withholding rate?"). Those five measure hallucination, which is what
 actually matters.
 
-### Retrieval and the guard
+Full run, 30/30 questions scored, 0 provider errors. Reproduce with `npm run eval`;
+the raw output is in [`evals/RESULTS.md`](evals/RESULTS.md).
 
-Deterministic and generation-free — reproduce with `npm run sweep`.
+| Metric | Score | Definition |
+|---|---|---|
+| Retrieval hit@5 | **92%** | an expected source chunk appears in the top 5 |
+| Answer accuracy | **100%** | every expected string appears in the answer |
+| Citation rate | **100%** | answers carrying at least one `[n]` marker |
+| Refusal precision | **100%** | unanswerable questions correctly refused |
+| False refusal rate | **0%** | answerable questions wrongly refused |
+| Mean latency, answers | **1164 ms** | retrieve + generate |
+| Mean latency, refusals | **1 ms** | the guard returns before any model call |
 
-| Metric | Result |
-|---|---|
-| **Retrieval hit@5** | **92%** (23/25) — an expected source chunk appears in the top 5 |
-| **Guard precision** | **100%** (5/5) — every off-corpus question refused without an LLM call |
-| **False refusal from the guard** | **0%** (0/25) — no answerable question is starved of context |
-| **Refusal latency** | **3–5 ms** — no network call happens at all |
-| Corpus | 847 chunks · 2 documents · 95 pages · 6.5 MB vector store |
+Corpus: 847 chunks · 2 documents · 95 pages · 6.5 MB vector store ·
+`gemini-embedding-001` (768d) · `gemini-3.5-flash-lite`.
+
+**Read those numbers honestly.** Two of them deserve caveats:
+
+- **Answer accuracy is substring containment**, not semantic judgement: it asks whether
+  `"$184,500"` appears in the answer. That is a deliberately objective, non-gameable
+  check — no LLM-as-judge — but it measures *extraction from supplied context*, which
+  is the easier half of RAG. 100% here means the model reliably quotes what retrieval
+  put in front of it. It does not mean the system is 100% right about tax law.
+- **hit@5 is the harder number, and it's 92%.** Two questions didn't surface the chunk
+  I'd nominated. Both still answered correctly, because the fact appeared in a
+  *different* retrieved chunk — which says my hand-labelled "expected" chunk was
+  incomplete, not that retrieval failed. A stricter eval would label every chunk
+  containing the fact.
+
+Only 30 questions, so none of this has a confidence interval. It's enough to catch a
+broken guard or a regression in chunking; it is not a benchmark.
 
 ### Why the similarity floor is 0.68, not 0.35
 
@@ -67,7 +87,7 @@ this corpus *every* question scores above 0.60, on-topic or not. A 0.35 floor wo
 never reject anything, and the refusal guarantee would silently be resting on the
 prompt instead.
 
-`npm run sweep` measures the actual distributions:
+The sweep measures the actual distributions:
 
 | | top-1 cosine |
 |---|---|
@@ -87,23 +107,27 @@ it is fitted to 30 questions** — a genuinely borderline question could land in
 and the band moves with the corpus, the chunker and the embedding model. The sweep is
 in the repo so it can be re-run rather than trusted.
 
-### Answer quality — pending one command
+### The runner refuses to publish a score it doesn't trust
 
-`npm run eval` also measures **answer accuracy**, **citation rate** and **latency**,
-which require generation. The last full run was cut short by the free tier's daily
-generation limit, and the runner is deliberately built to **refuse to publish a
-contaminated score**: it excludes questions that failed on provider errors, stamps
-`evals/RESULTS.md` as `INCOMPLETE`, withholds `evals/results.json` (the file the stat
-bar reads), and exits non-zero.
+Getting to a clean run took three attempts, and the failures are the reason this part
+is built the way it is. A provider 429 is an infrastructure failure, not a wrong
+answer — but the first version of the runner counted it as one and reported **84%**
+when nothing about the pipeline had actually failed. Understating a score is as
+dishonest as inflating it.
 
-So the stat bar currently shows `—` rather than a number I can't stand behind. One
-command fills it in:
+So now: errored questions are excluded from the metrics, `RESULTS.md` is stamped
+`INCOMPLETE — DO NOT PUBLISH`, `results.json` (the only file the app's stat bar reads)
+is **withheld**, and the process exits non-zero. The stat bar shows `—` rather than a
+number nobody can stand behind, and CI would fail on it.
 
-```bash
-npm run eval     # writes evals/RESULTS.md + results.json, lights up the stat bar
-```
+The run that produced the table above reports `"errored": 0, "incomplete": false`.
 
-A real 82% is worth more than a fabricated 97%.
+**The free tier also forced a model change.** `gemini-3.6-flash` allows **20 generation
+requests per day** — the eval needs 25, so it was arithmetically impossible to complete
+and no amount of retrying would have fixed it. Diagnosed from the `QuotaFailure`
+detail on the 429 (`quotaId: GenerateRequestsPerDayPerProjectPerModel-FreeTier,
+quotaValue: 20`), not guessed. `gemini-3.5-flash-lite` has the headroom and, being a
+strict extract-and-cite task, costs nothing in quality here.
 
 ---
 
