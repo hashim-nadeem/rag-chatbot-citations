@@ -2,7 +2,10 @@
 
 [![CI](https://github.com/hashim-nadeem/rag-chatbot-citations/actions/workflows/ci.yml/badge.svg)](https://github.com/hashim-nadeem/rag-chatbot-citations/actions/workflows/ci.yml)
 
-**Live demo:** _not deployed yet — see [Deploying](#deploying)_
+### ▶ [rag-chatbot-citations.vercel.app](https://rag-chatbot-citations.vercel.app)
+
+Try **"What is the capital of France?"** — it refuses in ~3 ms without calling the
+model at all. Then click any `[1]` to read the exact chunk the answer came from.
 
 Ask a question about 95 pages of IRS employer tax guidance. Every factual sentence
 comes back with a citation you can click open to read the exact source passage — and
@@ -278,14 +281,30 @@ components/chat/        message list, citation chips, source drawer, composer
 
 ## Deploying
 
+Runs on Vercel Hobby, free tier, no card.
+
 ```bash
-npx vercel --prod
+vercel link
+vercel env add GOOGLE_GENERATIVE_AI_API_KEY production
+vercel --prod
 ```
 
-Set `GOOGLE_GENERATIVE_AI_API_KEY` in the Vercel project (and the Upstash pair for
-rate limiting). `data/vectors.json` is committed and included in the lambda via
-`outputFileTracingIncludes` in [`next.config.ts`](next.config.ts). Then put the URL at
-the top of this file and check it from a phone.
+Two things about this app specifically are easy to get wrong on Vercel, and both fail
+*after* a green build rather than during it:
+
+- **`readFileSync` is invisible to the bundler.** `data/vectors.json` would be left
+  out of the function bundle, and every question would 503 in production while
+  working perfectly in local dev. `outputFileTracingIncludes` in
+  [`next.config.ts`](next.config.ts) names the two data files explicitly; you can
+  confirm they made it with
+  `cat .next/server/app/api/chat/route.js.nft.json | grep vectors`.
+- **The default function timeout is 10 s.** Reasoning tokens are generated before any
+  visible text, so a normal answer can exceed it and the stream gets cut mid-sentence
+  — intermittently, and only under load. `maxDuration = 60` is set on the route.
+
+Rate limiting is optional but recommended for a public URL: without the Upstash pair,
+`lib/ratelimit.ts` degrades to a no-op and one visitor can drain the daily free-tier
+quota. The precomputed answers keep the demo alive either way.
 
 ---
 
