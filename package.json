@@ -5,7 +5,7 @@
   "description": "A RAG chatbot that cites the exact source chunk for every claim and refuses, in code, when the documents do not cover the question. Ships with a runnable eval suite.",
   "license": "MIT",
   "engines": {
-    "node": ">=20"
+    "node": "22.x"
   },
   "scripts": {
     "dev": "next dev",
